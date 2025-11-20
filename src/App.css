@@ -1,0 +1,15 @@
+.app {
+  @apply min-h-screen bg-[#0a0e27] relative;
+}
+
+.app::before {
+  content: '';
+  @apply fixed inset-0 pointer-events-none z-0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(123, 44, 191, 0.1) 0%, transparent 50%);
+}
+
+.app > * {
+  @apply relative z-10;
+}
