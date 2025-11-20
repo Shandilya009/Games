@@ -68,12 +68,14 @@ function QuizGame({ gameId }) {
 
   useEffect(() => {
     startNewGame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (gameOver && user) {
       handleGameEnd();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameOver]);
 
   const startNewGame = () => {

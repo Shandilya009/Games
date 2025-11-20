@@ -41,12 +41,14 @@ function WordScramble({ gameId }) {
     }, 1000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (gameOver && user) {
       handleGameEnd();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameOver]);
 
   const scrambleWord = (word) => {

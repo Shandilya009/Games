@@ -16,6 +16,7 @@ function Home() {
 
   useEffect(() => {
     loadGamesAndStats();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadGamesAndStats = async () => {

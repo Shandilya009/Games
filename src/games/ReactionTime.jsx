@@ -23,6 +23,7 @@ function ReactionTime({ gameId }) {
     if (gameOver && user && times.length === MAX_ROUNDS) {
       handleGameEnd();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameOver, times.length]);
 
   const startRound = () => {

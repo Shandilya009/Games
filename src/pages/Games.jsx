@@ -15,8 +15,13 @@ function Games() {
     difficulty: '',
   });
 
+  const handleFilterChange = (key, value) => {
+    setFilters((prev) => ({ ...prev, [key]: value }));
+  };
+
   useEffect(() => {
     loadGames();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
 
   const loadGames = async () => {

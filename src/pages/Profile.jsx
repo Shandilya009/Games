@@ -36,6 +36,7 @@ function Profile() {
       newPassword: '',
       confirmPassword: '',
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, navigate]);
 
   const loadUserScores = async () => {
