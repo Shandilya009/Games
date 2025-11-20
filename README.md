@@ -1,16 +1,52 @@
-# React + Vite
+# Games — Browser Mini-Games
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains a collection of small browser games built with React and Vite.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Multiple small games (Memory, Quiz, Snake, Tic-Tac-Toe, etc.)
+- TailwindCSS for styling
+- Simple client-side routing with `react-router-dom`
 
-## React Compiler
+Getting started (local)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
 
-## Expanding the ESLint configuration
+```bash
+cd "$(dirname "${BASH_SOURCE[0]}")"
+npm ci
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Run the dev server:
+
+```bash
+npm run dev
+```
+
+3. Open http://localhost:5173 in your browser.
+
+Build for production
+
+```bash
+npm run build
+```
+
+Linting
+
+```bash
+npm run lint
+```
+
+Repository
+
+https://github.com/Shandilya009/Games
+
+License
+
+This project is available under the MIT License — see `LICENSE`.
+
+Contributing
+
+Feel free to open issues or pull requests. For quick fixes, fork the repo and create a PR.
+
+Maintainer: `Shandilya009`
