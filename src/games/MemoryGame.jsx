@@ -76,7 +76,7 @@ function MemoryGame({ gameId }) {
       const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + totalScore };
       localStorage.setItem('user', JSON.stringify(updatedUser));
       window.dispatchEvent(new Event('userUpdated'));
-    } catch (error) {
+    } catch {
       console.log('Score submission failed (using mock data)');
       const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + totalScore };
       localStorage.setItem('user', JSON.stringify(updatedUser));

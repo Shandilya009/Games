@@ -46,12 +46,12 @@ function Register() {
     setLoading(true);
 
     try {
-      const { confirmPassword, ...registerData } = formData;
+      const { confirmPassword: _confirmPassword, ...registerData } = formData;
 
       let response;
       try {
         response = await userAPI.register(registerData);
-      } catch (apiError) {
+      } catch {
         console.log('Using mock registration (backend not connected)');
         response = {
           user: {

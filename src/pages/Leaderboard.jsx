@@ -68,7 +68,7 @@ function Leaderboard() {
       try {
         const response = await leaderboardAPI.getTop(10);
         data = response.users || response;
-      } catch (apiError) {
+      } catch {
         console.log('Using mock leaderboard data (backend not connected)');
         // Simulate real-time updates for mock data
         data = updateMockLeaderboard();

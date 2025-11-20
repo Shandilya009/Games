@@ -38,7 +38,7 @@ function RockPaperScissors({ gameId }) {
   const [gameOver, setGameOver] = useState(false);
   const [isThinking, setIsThinking] = useState(false);
   const [lastPlayerChoice, setLastPlayerChoice] = useState(null);
-  const [currentStrategy, setCurrentStrategy] = useState('random');
+  const [_currentStrategy, setCurrentStrategy] = useState('random');
   const thinkingTimeoutRef = useRef(null);
   const { user } = useAuth();
   const { showToast } = useToast();
@@ -179,7 +179,7 @@ function RockPaperScissors({ gameId }) {
       const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + totalPoints };
       localStorage.setItem('user', JSON.stringify(updatedUser));
       window.dispatchEvent(new Event('userUpdated'));
-    } catch (error) {
+    } catch {
       console.log('Score submission failed (using mock data)');
       const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + totalPoints };
       localStorage.setItem('user', JSON.stringify(updatedUser));

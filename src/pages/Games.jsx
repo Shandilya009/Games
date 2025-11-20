@@ -26,7 +26,7 @@ function Games() {
       try {
         const response = await gamesAPI.getAll(filters);
         data = response.games || response;
-      } catch (apiError) {
+      } catch {
         console.log('Using mock games data (backend not connected)');
         data = mockData.games;
       }
@@ -47,12 +47,7 @@ function Games() {
     }
   };
 
-  const handleFilterChange = (filterType, value) => {
-    setFilters({
-      ...filters,
-      [filterType]: value,
-    });
-  };
+  
 
   const clearFilters = () => {
     setFilters({ type: '', difficulty: '' });

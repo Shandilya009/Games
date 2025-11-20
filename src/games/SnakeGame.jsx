@@ -36,7 +36,7 @@ function SnakeGame({ gameId }) {
     const startPos = getRandomStartPosition();
     return { x: startPos.x, y: startPos.y };
   });
-  const [direction, setDirection] = useState(() => getRandomDirection());
+  const [_direction, setDirection] = useState(() => getRandomDirection());
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -253,7 +253,7 @@ function SnakeGame({ gameId }) {
       const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + pointsEarned };
       localStorage.setItem('user', JSON.stringify(updatedUser));
       window.dispatchEvent(new Event('userUpdated'));
-    } catch (error) {
+    } catch {
       console.log('Score submission failed (using mock data)');
       const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + pointsEarned };
       localStorage.setItem('user', JSON.stringify(updatedUser));

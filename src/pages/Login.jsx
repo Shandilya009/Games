@@ -32,7 +32,7 @@ function Login() {
       let response;
       try {
         response = await userAPI.login(formData);
-      } catch (apiError) {
+      } catch {
         console.log('Using mock login (backend not connected)');
         response = {
           user: {

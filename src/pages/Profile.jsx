@@ -46,7 +46,7 @@ function Profile() {
       try {
         const response = await scoresAPI.getUserScores(user._id);
         setUserScores(response.scores || []);
-      } catch (apiError) {
+      } catch {
         console.log('Using mock user scores (backend not connected)');
         setUserScores([]);
       }
@@ -99,7 +99,7 @@ function Profile() {
           email: settingsForm.email.trim(),
         };
         updateUser(updatedUser);
-      } catch (apiError) {
+      } catch {
         console.log('Using mock profile update (backend not connected)');
         // Mock update
         const updatedUser = {
@@ -165,7 +165,7 @@ function Profile() {
           newPassword: '',
           confirmPassword: '',
         });
-      } catch (apiError) {
+      } catch {
         console.log('Using mock password change (backend not connected)');
         showToast('Password changed successfully!', 'success');
         setSettingsForm({

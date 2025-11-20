@@ -6,7 +6,7 @@ import { gamesAPI, mockData } from '../services/api';
 function Home() {
   const { user } = useAuth();
   const navigate = useNavigate();
-  const [games, setGames] = useState([]);
+  const [_games, setGames] = useState([]);
   const [stats, setStats] = useState({
     totalGames: 0,
     activePlayers: 0,
@@ -24,7 +24,7 @@ function Home() {
       try {
         const response = await gamesAPI.getAll();
         gamesData = response.games || response;
-      } catch (apiError) {
+      } catch {
         console.log('Using mock games data (backend not connected)');
         gamesData = mockData.games;
       }

@@ -121,7 +121,7 @@ function TicTacToe({ gameId }) {
         localStorage.setItem('user', JSON.stringify(updatedUser));
         window.dispatchEvent(new Event('userUpdated'));
       }
-    } catch (error) {
+    } catch {
       console.log('Score submission failed (using mock data)');
       if (points > 0) {
         const updatedUser = { ...user, totalPoints: (user.totalPoints || 0) + points };
